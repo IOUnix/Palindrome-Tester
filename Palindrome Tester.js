@@ -1,7 +1,19 @@
-var word = "racecar";
+var input = "racecar";
 
+
+//Output results
+if (palChk(input)){
+    console.log("Palindrome");
+}
+else{
+    console.log("Not Palindrome")
+}
+
+
+function palChk (word){
 var letters = [];
 var rWord = [];
+
 
 //add word to letters stack
 for (var i=0; i < word.length; i++){
@@ -13,11 +25,9 @@ for(var i=0; i < word.length; i++){
 rWord.push(letters.pop())
 }
 
-
-//compare stacks
+//Check if palindrome
 if (rWord.join("") == word){
-    console.log("Palindrome");
+    return true
 }
-else{
-    console.log("Not Palindrome")
+
 }
